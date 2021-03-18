@@ -1,0 +1,34 @@
+﻿/* Header */
+.container, .container-fluid {
+    background-color: rgba(48, 58, 82, 0.5);
+    border-bottom: 1px solid #eee;
+}
+
+.header-image {
+    width: 100px;
+}
+
+.header-link {
+    font-size: 16px;
+    color: wheat;
+    margin-right: 5px;
+}
+
+/* Link*/
+.link {
+    top: 10px;
+    padding: 10px;
+    flex-direction: row;
+    display: inline-block;
+    outline: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.link:hover {
+    transform: scale(1.10);}
+
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: wheat;
+}

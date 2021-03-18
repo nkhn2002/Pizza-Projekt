@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Pizza_Projekt.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/Header.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Forside.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Footer.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Menu/Menu.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <form class="main" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <!-- Header -->
+        <div class="container-fluid">
+            <img class="header-image" runat="server" src="~/Content/Images/pizza-logo.png" />
+
+            <div class="link">
+                <a class="header-link" runat="server" href="~/Default"><strong>FORSIDE</strong></a>
+            </div>
+
+            <div class="link">
+                <a class="header-link" runat="server" href="~/Content/Menu/Menu"><strong>MENU KORT</strong></a>
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Main Content -->
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+
+        <!-- Footer -->
+        <div class="footer-fluid">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img class="footer-img" runat="server" src="~/Content/Images/pizza-logo.png" />
+                    <p>ZBPizza, Denmark</p>
+                    <p>Bogøvej 15, 8382, Hinnerup</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light" />
+                    <h5>Support Chat Hours</h5>
+                    <hr class="light" />
+                    <p>Monday to Friday: 8am - 4pm</p>
+                    <p>Saturday to Sunday: closed</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light" />
+                    <h5>Contact Information</h5>
+                    <hr class="light" />
+                    <p>business@zbpizza.dk</p>
+                    <p>+45 88 88 88 88</p>
+                </div>
+                <div class="col-12">
+                    <hr class="light" />
+                    <h5>&copy; ZBPizza.dk 2021</h5>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

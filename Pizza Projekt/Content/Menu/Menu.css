@@ -1,0 +1,42 @@
+﻿.menu, .menu-fluid {
+    bottom: 0;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: url("Images/img-background.jpg");
+    background-size: 100%;
+    border: black solid 1px;
+    position: static;
+}
+
+.menu-section {
+
+}
+
+.table-menu {
+    font-size: 14px;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.table-menu td,
+.table-menu th {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/* Menu Box */
+.menu-box {
+    background: rgba(48, 58, 82, 0.5);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 17.5px 25px 12.5px 5px;
+    display: table;
+    float: left;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    color:white;
+}

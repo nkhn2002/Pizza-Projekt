@@ -1,0 +1,9 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+   
+}
+
+.main {
+    background-image: url("Images/img-background.jpg");
+    background-size: 100%;
+}

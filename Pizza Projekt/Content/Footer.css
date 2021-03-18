@@ -1,0 +1,18 @@
+﻿/* Header */
+.footer, .footer-fluid {
+    bottom: 0;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(48, 58, 82);
+    color: white;
+    border: black solid 2px;
+    position: static;
+}
+
+.footer-img {
+    width: 130px;
+    height: 100px;
+}
