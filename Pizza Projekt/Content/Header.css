@@ -10,7 +10,7 @@
 
 .header-link {
     font-size: 16px;
-    color: wheat;
+    color: white;
     margin-right: 5px;
 }
 
@@ -30,5 +30,5 @@
 
 a, a:hover, a:focus, a:active {
     text-decoration: none;
-    color: wheat;
-}
+    color: white;
+}   

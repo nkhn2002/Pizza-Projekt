@@ -4,9 +4,6 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="menu-fluid">
         <div class="menu-section" style="height:540px;">
-            <center>
-                <h1 style="color:#278ea5;"><strong>Menu kort</strong></h1>
-            </center>
             <div class="menu-box" style="margin-top: 50px;">
                 <asp:Table ID="SalatPizza" runat="server">
                 <asp:TableRow runat="server" class="table-menu">

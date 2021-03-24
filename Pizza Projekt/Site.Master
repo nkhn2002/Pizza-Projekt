@@ -49,7 +49,7 @@
 
         <!-- Header -->
         <div class="container-fluid">
-            <img class="header-image" runat="server" src="~/Content/Images/pizza-logo.png" />
+            <img class="header-image" runat="server" href="~/Default" src="~/Content/Images/pizza-logo.png" />
 
             <div class="link">
                 <a class="header-link" runat="server" href="~/Default"><strong>FORSIDE</strong></a>
