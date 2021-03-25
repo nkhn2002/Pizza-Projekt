@@ -2,9 +2,8 @@
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="menu-fluid">
-        <div class="menu-section" style="height:540px;">
-            <div class="menu-box" style="margin-top: 50px;">
+    <div class="menu-fluid"  style="height:860px;">
+        <div class="menu-box" style="margin-top: 50px;">
                 <asp:Table ID="SalatPizza" runat="server">
                 <asp:TableRow runat="server" class="table-menu">
                     <asp:TableCell runat="server">Royal</asp:TableCell>
@@ -22,7 +21,6 @@
                     <asp:TableCell runat="server">63,- 85,- 125,-</asp:TableCell>
                 </asp:TableRow>
             </asp:Table>
-            </div>
         </div>
     </div>
 </asp:Content>

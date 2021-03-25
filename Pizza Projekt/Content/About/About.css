@@ -1,4 +1,4 @@
-﻿.menu, .menu-fluid {
+﻿.about, .about-fluid {
     background: white;
     background-size: 100%;
     bottom: 0;
@@ -11,21 +11,7 @@
     position: static;
 }
 
-.table-menu {
-    font-size: 14px;
-    text-align: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.table-menu td,
-.table-menu th {
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
-/* Menu Box */
-.menu-box {
+.about-img-box {
     background: rgba(48, 58, 82, 0.5);
     border-radius: 10px;
     padding: 25px;
@@ -34,5 +20,10 @@
     float: left;
     transition: all .2s ease-in-out;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    color:white;
+    color: white;
+}
+
+.about-img-box-desc {
+    font-size: 32px;
+    text-align:center;
 }
