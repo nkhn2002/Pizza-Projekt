@@ -1,0 +1,45 @@
+CREATE TABLE Users (
+	UserID int NOT NULL PRIMARY KEY,
+	Username Varchar(20),
+	Password Varchar(30),
+	IsAdmin bit,
+	IsEmployee bit
+)
+
+CREATE TABLE UserData (
+	UserID int FOREIGN KEY REFERENCES Users(UserID),
+	Firstname Varchar(40),
+	Lastname Varchar(40),
+	Phone int,
+	Email Varchar(100)
+)
+
+CREATE TABLE Toppings (
+	TopID int not null primary key,
+	Name Varchar(40),
+	Price float
+)
+
+CREATE TABLE Pizza (
+	PizzaID int not null primary key,
+	Name varchar(40),
+	Price float,
+	TopID int FOREIGN KEY REFERENCES Toppings(TopID)
+)
+
+CREATE TABLE Address (
+	AddID int not null primary key,
+	Address varchar(max),
+	ZipCode int,
+	Town varchar(40),
+	UserID int FOREIGN KEY REFERENCES Users(UserID)
+)
+
+CREATE TABLE Orders (
+	OdrID int not null primary key,
+	DeliveryTime int,
+	TotalPrice float,
+	OrderPlaced int,
+	AddID int FOREIGN KEY REFERENCES Address(AddID),
+	UserID int FOREIGN KEY REFERENCES Users(UserID)
+)

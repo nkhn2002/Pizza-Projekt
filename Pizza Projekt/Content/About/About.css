@@ -27,3 +27,19 @@
     font-size: 32px;
     text-align:center;
 }
+
+.welcome {
+    margin: 0 auto;
+    padding-top: 4rem;
+}
+
+.welcome hr {
+    border-top: 2px solid #b4b4b4;
+    width: 95%;
+    margin-top: .3rem;
+    margin-bottom: 1rem;
+}
+
+.padding {
+    padding-bottom: 4rem;
+}
