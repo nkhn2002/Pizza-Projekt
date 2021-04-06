@@ -146,7 +146,7 @@ namespace Pizza_Projekt
                     }
                     else
                     {
-                        return "Error occured";
+                        return "Error occured ";
                     }
                 }
             }
