@@ -1,0 +1,69 @@
+﻿.menu, .menu-fluid {
+    background: white;
+    background-size: 100%;
+    bottom: 0;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    border: black solid 1px;
+    position: static;
+}
+
+.register-title {
+    font-size: 20px;
+    color: white;
+    margin-top: 5px;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+}
+
+.title-line {
+
+}
+
+.register-text {
+    font-size: 18px;
+    color: white;
+    margin-top:15px;
+}
+
+.register-desc {
+    font-size: 12px;
+    color: white;
+}
+
+.register-input {
+    color: white;
+    background: #3b4666;
+    border: 2px solid #353f5c;
+    padding: 6px;
+    transition: 0.3s;
+    font-size: 14px;
+    border-radius: 5px;
+    outline: none;
+    width: 234px;
+}
+
+.register-button {
+    outline: none;
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 10px;
+    padding-right: 63px;
+    padding-left: 65px;
+    border-radius: 5px;
+    color: white;
+    background: #3b4666;
+    border: 2px solid transparent;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.form-element p {
+    display: inline-block;
+    width: 100px;
+    padding:20px;
+}

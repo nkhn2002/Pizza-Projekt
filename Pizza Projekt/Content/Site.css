@@ -7,3 +7,10 @@ body {
     background-image: url("Images/img-background.jpg");
     background-size: 100%;
 }
+
+.alert {
+    width: 200px;
+    padding-right: 41px;
+    padding-left: 41px;
+    top: 25px;
+}

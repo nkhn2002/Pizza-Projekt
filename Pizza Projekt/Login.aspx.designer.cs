@@ -11,7 +11,7 @@ namespace Pizza_Projekt
 {
 
 
-    public partial class Register
+    public partial class Login
     {
 
         /// <summary>
@@ -33,13 +33,13 @@ namespace Pizza_Projekt
         protected global::System.Web.UI.WebControls.TextBox TB_Password;
 
         /// <summary>
-        /// RegButton control.
+        /// LoginButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RegButton;
+        protected global::System.Web.UI.WebControls.Button LoginButton;
 
         /// <summary>
         /// AlertBox control.

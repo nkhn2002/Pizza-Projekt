@@ -19,11 +19,14 @@
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/Box.css" rel="stylesheet" type="text/css" />
     <link href="Content/Header.css" rel="stylesheet" type="text/css" />
     <link href="Content/Forside.css" rel="stylesheet" type="text/css" />
     <link href="Content/Footer.css" rel="stylesheet" type="text/css" />
     <link href="Content/Menu/Menu.css" rel="stylesheet" type="text/css" />
     <link href="Content/About/About.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Register/Register.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Login/Login.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
@@ -65,11 +68,11 @@
             </div>
 
             <div class="link-right link" style="float: right; margin-top: 20px;">
-                <a class="header-link" runat="server" href="#"><strong>LOGIN</strong></a>
+                <a class="header-link" runat="server" href="~/Login"><strong>LOGIN</strong></a>
             </div>
 
             <div class="link" style="float: right; margin-top: 20px;">
-                <a class="header-link" runat="server" href="#"><strong>REGISTER</strong></a>
+                <a class="header-link" runat="server" href="~/Register"><strong>REGISTER</strong></a>
             </div>
         </div>
         <!-- Header End -->
