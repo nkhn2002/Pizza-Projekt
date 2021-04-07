@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 using System.Data;
+using System.Diagnostics;
 
 namespace Pizza_Projekt
 {
@@ -12,18 +13,18 @@ namespace Pizza_Projekt
         public string Conn = "Data Source=173.212.212.111; Initial Catalog = ZBPizza; User ID = ZBPizza; Password=ABC1234!";
 
         // Validate login
-        public bool ValidateLogin(string user, string pass)
+        public bool ValidateLogin(UserManager UM)
         {
             try
             {
-                string query = $"SELECT COUNT(*) FROM Users WHERE username = @Username AND password = @Password";
+                string query = $"SELECT * FROM Users WHERE username = @Username AND password = @Password";
                 using (SqlConnection connection = new SqlConnection(Conn))
                 {
                     connection.Open();
                     SqlCommand cmd = new SqlCommand(query, connection);
 
-                    cmd.Parameters.AddWithValue("@Username", user);
-                    cmd.Parameters.AddWithValue("@Password", pass);
+                    cmd.Parameters.AddWithValue("@Username", UM.Username);
+                    cmd.Parameters.AddWithValue("@Password", UM.Password);
 
                     SqlDataAdapter sda = new SqlDataAdapter(cmd);
 
@@ -32,7 +33,10 @@ namespace Pizza_Projekt
 
                     connection.Close();
 
-                    if (dt.Rows[0][0].ToString() == "1")
+                    string password = dt.Rows[0]["Password"].ToString();
+                    int count = dt.Rows.Count;
+
+                    if (UM.Password == password && count == 1)
                     {
                         return true;
                     }
@@ -42,8 +46,9 @@ namespace Pizza_Projekt
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
+                Debug.WriteLine(ex.ToString());
                 return false;
             }
         }
@@ -54,7 +59,7 @@ namespace Pizza_Projekt
             try
             {
                 string query = "SELECT COUNT(*) FROM users WHERE username = @Username";
-                using(SqlConnection connection = new SqlConnection(Conn))
+                using (SqlConnection connection = new SqlConnection(Conn))
                 {
                     connection.Open();
                     SqlCommand cmd = new SqlCommand(query, connection);
@@ -119,23 +124,39 @@ namespace Pizza_Projekt
         }
 
         // Register new account
-        public string RegísterAccount(string user, string pass)
+        public string RegisterAccount(UserManager UM)
         {
             try
             {
-                if(validateUsername(user))
+                // Check username length
+                if (UM.Username.Length < 6 || UM.Username.Length > 12)
+                {
+                    return "Wrong username format";
+                }
+
+                // Check password length
+                if (UM.Password.Length < 8 || UM.Password.Length > 32)
+                {
+                    return "Wrong password format";
+                }
+
+                // Check if username already exists
+                if (validateUsername(UM.Username))
                 {
                     return "Account already exists";
                 }
 
+                // String query
                 string query = "INSERT INTO Users (Username, Password, IsAdmin, IsEmployee) VALUES (@Username, @Password, 0, 0)";
-                using(SqlConnection connection = new SqlConnection(Conn))
+
+                // New SQL Connection 
+                using (SqlConnection connection = new SqlConnection(Conn))
                 {
                     connection.Open();
-                    SqlCommand cmd = new SqlCommand(query, connection);
+                    SqlCommand cmd = new SqlCommand(query, connection); 
 
-                    cmd.Parameters.AddWithValue("@Username", user);
-                    cmd.Parameters.AddWithValue("@Password", pass);
+                    cmd.Parameters.AddWithValue("@Username", UM.Username);
+                    cmd.Parameters.AddWithValue("@Password", UM.Password);
 
                     int i = cmd.ExecuteNonQuery();
                     connection.Close();
@@ -146,12 +167,13 @@ namespace Pizza_Projekt
                     }
                     else
                     {
-                        return "Error occured ";
+                        return "Error occured";
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
+                System.Diagnostics.Debug.WriteLine(ex.ToString()); // Debugging
                 return ex.ToString();
             }
         }

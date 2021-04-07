@@ -7,7 +7,7 @@
                 <p class="register-title"><strong>Register your account</strong></p>
             </center>
             <hr class="title-line" />
-            <p class="register-desc">Your username must be 6-12 characters long and your password must be 8-32 characters long with 1 big letter</p>
+            <p class="register-desc">Your username must be 6-12 characters long and your password must be 8-32 characters long.</p>
 
             <p class="register-text">Username:</p>
             <div class="form-element">

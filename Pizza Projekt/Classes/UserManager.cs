@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.UI.WebControls;
 
 namespace Pizza_Projekt
 {
-    public class Login2
+    public class UserManager
     {
         private string username;
         private string password;
@@ -23,14 +22,13 @@ namespace Pizza_Projekt
             set { password = value; }
         }
 
-        public Login2(string _username, string _password)
+        public UserManager(string _user, string _pass)
         {
-            username = _username;
-            password = _password;
-
+            username = _user;
+            password = _pass;
         }
 
-        public Login2()
+        public UserManager()
         {
 
         }
