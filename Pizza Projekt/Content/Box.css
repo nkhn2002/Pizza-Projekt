@@ -24,6 +24,20 @@
     transform: translate(55%, 10%);
 }
 
+/* Cart Box */
+.cart-box {
+    background: rgba(48, 58, 82, 0.9);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 12.5px 25px 12.5px 0px;
+    display: table;
+    float: left;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    transform: translate(55%, 10%);
+}
+
 /* Register Box */
 .register-box {
     background: rgba(48, 58, 82, 0.8);

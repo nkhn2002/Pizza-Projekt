@@ -13,8 +13,6 @@ namespace Pizza_Projekt.Content.Menu
         DAL Dal = new DAL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Test.ShowToastr(this.Page, "Hello world!", "Hello");
-
             if (!Page.IsPostBack)
             {
                 DataTable dt = new DataTable();
@@ -54,12 +52,16 @@ namespace Pizza_Projekt.Content.Menu
                 list = new List<Pizza>();
                 list.Add(new Pizza(pizzaid, name, toppings, price));
                 Session["cart"] = list;
+
+                Toastr.Success(this.Page, $"{name} added to cart!", "SUCCESS");
             }
             else
             {
                 list = (List<Pizza>)Session["cart"];
                 list.Add(new Pizza(pizzaid, name, toppings, price));
                 Session["cart"] = list;
+
+                Toastr.Success(this.Page, $"{name} added to cart!", "SUCCESS");
             }
         }
     }

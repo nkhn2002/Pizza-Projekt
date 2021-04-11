@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Cart.aspx" />
     <Content Include="Content\About\About.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -186,10 +187,17 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Classes\DAL.cs" />
     <Compile Include="Classes\Pizza.cs" />
     <Compile Include="Classes\SessionData.cs" />
-    <Compile Include="Classes\Test.cs" />
+    <Compile Include="Classes\Toastr.cs" />
     <Compile Include="Classes\Topping.cs" />
     <Compile Include="Classes\UserManager.cs" />
     <Compile Include="Login.aspx.cs">
