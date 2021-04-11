@@ -1,12 +1,14 @@
-﻿.menu, .menu-fluid {
-    background: white;
-    background-size: 100%;
-    bottom: 0;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    border: black solid 1px;
-    position: static;
+﻿menu-button {
+    outline: none;
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 10px;
+    padding-right: 96px;
+    padding-left: 96px;
+    border-radius: 5px;
+    color: white;
+    background: #3b4666;
+    border: 2px solid transparent;
+    font-weight: bold;
+    transition: 0.3s;
 }

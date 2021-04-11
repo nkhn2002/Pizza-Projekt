@@ -27,6 +27,7 @@
     <link href="Content/About/About.css" rel="stylesheet" type="text/css" />
     <link href="Content/Register/Register.css" rel="stylesheet" type="text/css" />
     <link href="Content/Login/Login.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Profile/Profile.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>

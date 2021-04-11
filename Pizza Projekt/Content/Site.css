@@ -14,3 +14,16 @@ body {
     padding-left: 41px;
     top: 25px;
 }
+
+.menu, .menu-fluid {
+    background: rgba(48, 58, 82, 0.8);
+    background-size: 100%;
+    bottom: 0;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    border: black solid 1px;
+    position: static;
+}

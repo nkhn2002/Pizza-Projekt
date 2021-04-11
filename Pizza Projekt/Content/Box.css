@@ -11,7 +11,7 @@
 
 /* Menu Box */
 .menu-box {
-    background: rgba(48, 58, 82, 0.5);
+    background: rgba(48, 58, 82, 1);
     border-radius: 10px;
     padding: 25px;
     margin: 17.5px 25px 12.5px 5px;
@@ -20,6 +20,7 @@
     transition: all .2s ease-in-out;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     color: white;
+    transform: translate(100%, 10%);
 }
 
 /* Register Box */
@@ -44,6 +45,20 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 25px;
+}
+
+/* Login Box */
+.profile-box {
+    background: rgba(48, 58, 82, 0.8);
+    width: 355px;
+    margin: auto;
+    margin-right: 70px;
+    height: 338px;
+    margin-top: 190px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 25px;
+    float: right;
 }
 
 /* Table */

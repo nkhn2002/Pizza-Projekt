@@ -7,14 +7,21 @@ using System.Web.Security;
 using System.Web.UI.WebControls;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Diagnostics;
 
 namespace Pizza_Projekt
 {
     public partial class Login : System.Web.UI.Page
     {
+        List<Pizza> list;
         protected void Page_Load(object sender, EventArgs e)
         {
+            list = (List<Pizza>)Session["cart"];
 
+            for (int i = 0; i < list.Count; i++) 
+            {
+                Debug.WriteLine(list[i].Name);
+            }
         }
 
         protected void LoginButton_Click(object sender, EventArgs e)
@@ -23,15 +30,16 @@ namespace Pizza_Projekt
 
             if (Dal.ValidateLogin(new UserManager(TB_Username.Text, TB_Password.Text)))
             {
-                AlertBox.CssClass = "alert alert-success";
-                AlertBox.Text = "Successfully logged in...";
+                SessionData data = Dal.getSessionData(1); // Get User Data
 
-                // Start status checker thread
-                Task.Factory.StartNew(delegate ()
-                {
-                    Thread.Sleep(1500);
-                    FormsAuthentication.RedirectFromLoginPage(TB_Username.Text, true);
-                });
+                // Set user data to session
+                Session["userid"] = data.UserID.ToString();
+                Session["username"] = data.Username;
+                Session["password"] = data.Password;
+                Session["admin"] = data.IsAdmin.ToString();
+                Session["employee"] = data.IsEmployee.ToString();
+
+                Response.Redirect("/Profile/UserInfo.aspx");
             }
             else
             {

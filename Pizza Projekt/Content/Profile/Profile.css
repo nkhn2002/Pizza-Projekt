@@ -1,0 +1,45 @@
+﻿.profile-button {
+    outline: none;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 10px;
+    padding-right: 96px;
+    padding-left: 96px;
+    border-radius: 5px;
+    color: white;
+    background: #3b4666;
+    border: 2px solid transparent;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.profile-section {
+    background: rgba(48, 58, 82, 0.8);
+    width: 485px;
+    margin: auto;
+    margin-right: 240px;
+    height: 438px;
+    margin-top: 140px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 25px;
+    float: right;
+}
+
+.section-input {
+    color: white;
+    background: #3b4666;
+    border: 2px solid #353f5c;
+    padding: 6px;
+    transition: 0.3s;
+    font-size: 14px;
+    border-radius: 5px;
+    outline: none;
+    width: 434px;
+}
+
+.form-element p {
+    display: inline-block;
+    width: 100px;
+    padding: 20px;
+}
