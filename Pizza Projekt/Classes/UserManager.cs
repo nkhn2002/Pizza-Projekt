@@ -88,6 +88,16 @@ namespace Pizza_Projekt
             email = _email;
         }
 
+        public UserManager(int _id, string _user, string _fullname, string _address, string _email, int _phone)
+        {
+            userid = _id;
+            username = _user;
+            fullname = _fullname;
+            address = _address;
+            email = _email;
+            phone = _phone;
+        }
+
         public UserManager()
         {
 

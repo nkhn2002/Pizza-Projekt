@@ -25,7 +25,7 @@ namespace Pizza_Projekt
 
             if (Dal.ValidateLogin(new UserManager(TB_Username.Text, TB_Password.Text)))
             {
-                SessionData data = Dal.getSessionData(1); // Get User Data
+                SessionData data = Dal.getSessionData(Dal.getUserID(TB_Username.Text, TB_Password.Text)); // Get User Data
 
                 // Set user data to session
                 Session["userid"] = data.UserID.ToString();

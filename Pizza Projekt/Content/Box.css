@@ -38,6 +38,20 @@
     transform: translate(55%, 10%);
 }
 
+/* Cart Box */
+.admin-box {
+    background: rgba(48, 58, 82, 0.9);
+    width: 355px;
+    margin: auto;
+    margin-right: 70px;
+    height: 220px;
+    margin-top: 190px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 25px;
+    float: right;
+}
+
 /* Register Box */
 .register-box {
     background: rgba(48, 58, 82, 0.8);

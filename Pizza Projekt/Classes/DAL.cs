@@ -156,6 +156,7 @@ namespace Pizza_Projekt
 
             // Get User ID
             int userID = getUserID(_user, _pass);
+            Debug.WriteLine(userID);
 
             // New SQL Connection 
             using (SqlConnection connection = new SqlConnection(Conn))
@@ -289,5 +290,25 @@ namespace Pizza_Projekt
             }
         }
         #endregion
+
+        public List<UserManager> GetAllUserData()
+        {
+            List<UserManager> list = new List<UserManager>();
+            string query = "SELECT * FROM Users JOIN UserData ON Users.UserID = UserData.UserID; ";
+            using (SqlConnection connection = new SqlConnection(Conn))
+            {
+                connection.Open();
+                DataTable dt = new DataTable();
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                adapter.Fill(dt);
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    list.Add(new UserManager(int.Parse(dt.Rows[i]["UserID"].ToString()), dt.Rows[i]["Username"].ToString(), dt.Rows[i]["Fullname"].ToString(), dt.Rows[i]["Address"].ToString(), dt.Rows[i]["Email"].ToString(), int.Parse(dt.Rows[i]["Phone"].ToString())));
+                }
+                return list;
+            }
+        }
     }
 }
