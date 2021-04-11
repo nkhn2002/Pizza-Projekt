@@ -16,12 +16,7 @@ namespace Pizza_Projekt
         List<Pizza> list;
         protected void Page_Load(object sender, EventArgs e)
         {
-            list = (List<Pizza>)Session["cart"];
 
-            for (int i = 0; i < list.Count; i++) 
-            {
-                Debug.WriteLine(list[i].Name);
-            }
         }
 
         protected void LoginButton_Click(object sender, EventArgs e)

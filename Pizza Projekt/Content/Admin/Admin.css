@@ -1,0 +1,59 @@
+﻿.test-fluid {
+    background: white;
+    background-size: 100%;
+    bottom: 0;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    border: black solid 1px;
+    position: static;
+}
+
+.search-textbox {
+    background-color: #485882;
+    opacity: 0.8;
+    color: white;
+    margin-top: 100px;
+    margin-left: 700px;
+    height: 24px;
+    width: 252px;
+    border-style: solid;
+    border-color: #485882;
+    border-radius: 8px;
+}
+
+.table-box {
+    background-color: #485882;
+    opacity: 0.8;
+    color: white;
+    margin-top: 5px;
+    margin-left: 700px;
+    border-style: solid;
+    border-color: #485882;
+    border-radius: 8px;
+}
+
+.B1, .B2 {
+    margin-left: 1250px;
+    position: unset;
+}
+
+.B1 {
+    background-color: #485882;
+    opacity: 0.8;
+    color: white;
+    border-style: solid;
+    border-color: #485882;
+    border-radius: 8px;
+}
+
+.B2 {
+    background-color: #485882;
+    opacity: 0.8;
+    color: white;
+    border-style: solid;
+    border-color: #485882;
+    border-radius: 8px;
+}
