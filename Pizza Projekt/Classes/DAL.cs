@@ -283,7 +283,7 @@ namespace Pizza_Projekt
 
                 for(int i = 0; i < dt.Rows.Count; i++)
                 {
-                    list.Add(new Pizza(int.Parse(dt.Rows[i]["PizzaID"].ToString()), dt.Rows[i]["Name"].ToString(), float.Parse(dt.Rows[i]["Price"].ToString())));
+                    list.Add(new Pizza(int.Parse(dt.Rows[i]["PizzaID"].ToString()), dt.Rows[i]["Name"].ToString(), dt.Rows[i]["Toppings"].ToString(), float.Parse(dt.Rows[i]["Price"].ToString())));
                 }
                 return list;
             }

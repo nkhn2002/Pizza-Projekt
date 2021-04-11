@@ -13,19 +13,23 @@ namespace Pizza_Projekt.Content.Menu
         DAL Dal = new DAL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!Page.IsPostBack)
+            Test.ShowToastr(this.Page, "Hello world!", "Hello");
+
+            if (!Page.IsPostBack)
             {
                 DataTable dt = new DataTable();
                 DataRow row;
 
                 dt.Columns.Add("PizzaID");
                 dt.Columns.Add("Name");
+                dt.Columns.Add("Toppings");
                 dt.Columns.Add("Price");
                 for (int i = 0; i < Dal.GetAllPizza().Count; i++)
                 {
                     row = dt.NewRow();
                     row["PizzaID"] = Dal.GetAllPizza()[i].PizzaID;
                     row["Name"] = Dal.GetAllPizza()[i].Name;
+                    row["Toppings"] = Dal.GetAllPizza()[i].Toppings;
                     row["Price"] = Dal.GetAllPizza()[i].Price;
                     dt.Rows.Add(row);
 
@@ -42,18 +46,19 @@ namespace Pizza_Projekt.Content.Menu
 
             int pizzaid = int.Parse(MenuGrid.Rows[((GridViewRow)((Control)sender).NamingContainer).RowIndex].Cells[0].Text);
             string name = MenuGrid.Rows[((GridViewRow)((Control)sender).NamingContainer).RowIndex].Cells[1].Text;
-            float price = float.Parse(MenuGrid.Rows[((GridViewRow)((Control)sender).NamingContainer).RowIndex].Cells[2].Text);
+            string toppings = MenuGrid.Rows[((GridViewRow)((Control)sender).NamingContainer).RowIndex].Cells[2].Text;
+            float price = float.Parse(MenuGrid.Rows[((GridViewRow)((Control)sender).NamingContainer).RowIndex].Cells[3].Text);
 
             if (Session["cart"] == null)
             {
                 list = new List<Pizza>();
-                list.Add(new Pizza(pizzaid, name, price));
+                list.Add(new Pizza(pizzaid, name, toppings, price));
                 Session["cart"] = list;
             }
             else
             {
                 list = (List<Pizza>)Session["cart"];
-                list.Add(new Pizza(pizzaid, name, price));
+                list.Add(new Pizza(pizzaid, name, toppings, price));
                 Session["cart"] = list;
             }
         }

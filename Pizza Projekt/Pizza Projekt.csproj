@@ -117,6 +117,8 @@
     <Content Include="Content\Login\Login.css" />
     <Content Include="Content\Profile\Profile.css" />
     <Content Include="Content\Register\Register.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
     <Content Include="Login.aspx" />
     <Content Include="Menu.aspx" />
     <Content Include="Content\Menu\Menu.css" />
@@ -133,6 +135,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Profile\UserInfo.aspx" />
     <Content Include="Register.aspx" />
@@ -143,6 +147,8 @@
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -183,6 +189,7 @@
     <Compile Include="Classes\DAL.cs" />
     <Compile Include="Classes\Pizza.cs" />
     <Compile Include="Classes\SessionData.cs" />
+    <Compile Include="Classes\Test.cs" />
     <Compile Include="Classes\Topping.cs" />
     <Compile Include="Classes\UserManager.cs" />
     <Compile Include="Login.aspx.cs">

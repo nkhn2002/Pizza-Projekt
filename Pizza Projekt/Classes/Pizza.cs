@@ -36,10 +36,11 @@ namespace Pizza_Projekt
             set { toppings = value; }
         }
 
-        public Pizza(int _id, string _name, float _price)
+        public Pizza(int _id, string _name, string _toppings, float _price)
         {
             pizzaid = _id;
             name = _name;
+            toppings = _toppings;
             price = _price;
         }
     }
