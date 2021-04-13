@@ -10,7 +10,7 @@ namespace Pizza_Projekt
 {
     public class DAL
     {
-        public string Conn = "Server=173.212.212.111;Database=ZBPizza;User Id=ZBPizza;Password=ABC1234!;";
+        public string Conn = "Server=173.212.***.***;Database=ZBPizza;User Id=ZBPizza;Password=ABC1234!;";
 
         #region ValidateLogin
         // Validate login
